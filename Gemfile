@@ -17,7 +17,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
+gem 'execjs'
+gem 'therubyracer'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -33,6 +34,24 @@ gem 'sdoc',          group: :doc, require: false
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/jonleighton/spring
 gem 'spring',        group: :development
+
+# Audits activerecord models like a boss
+#gem "espinita"
+
+gem 'paper_trail', '~> 3.0.1'
+
+# Use HAML to cleaner views
+gem 'html2haml'
+gem "haml-rails", '0.4'
+
+group :development, :test do
+  gem "capybara-webkit"
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'pry-rails'
+  gem 'pry-remote'
+  gem 'faker'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
